@@ -33,6 +33,7 @@ export default {
 		background-size: cover;
 		background-position: center center;
 		overflow: hidden;
+		border: 5px solid #fff;
 		&::after{
 				opacity: 0;
 				content: "X";
