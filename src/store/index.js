@@ -52,9 +52,9 @@ export default new Vuex.Store({
 				if (state.allDogs[key].name == payload.breed) {
 					const url = payload.url;
 					state.allDogs[key].images.splice(state.allDogs[key].images.indexOf(url), 1);
-          if(state.allDogs[key].images.length < 1){
-            state.selectedItems.splice(state.selectedItems.indexOf(payload.breed), 1)
-          }
+					if (state.allDogs[key].images.length < 1) {
+						state.selectedItems.splice(state.selectedItems.indexOf(payload.breed), 1);
+					}
 				}
 			}
 		},
