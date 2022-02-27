@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 	state: function () {
 		return {
-			allDogs: null,
+			allDogs: [],
 			selectedDogs: [],
 			numberSelected: null,
 			selectedItems: [],
