@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ListAllDogs msg="DogApp"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ListAllDogs from './components/ListAllDogs.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ListAllDogs
   }
 }
 </script>
@@ -21,8 +20,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin:60px auto;
+  max-width:1200px;
 }
 </style>
