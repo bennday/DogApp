@@ -20,7 +20,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin:60px auto;
+  margin:0 auto;
   max-width:1200px;
+  padding: 30px;
 }
 </style>
