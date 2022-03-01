@@ -27,9 +27,12 @@
 				</div>
 
 				<div class="dog_sub-breed container">
-					<p>Number of <span class="breed_name">{{ item.name }} </span> sub-breeds: {{ item.subBreeds.length }}</p>
+					<p>
+						Number of
+						<span class="breed_name">{{ item.name }}</span>
+						sub-breeds: {{ item.subBreeds.length }}
+					</p>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -43,7 +46,6 @@ export default {
 	components: {
 		DogImages,
 	},
-
 	props: {
 		msg: String,
 	},
@@ -83,14 +85,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 svg {
 	width: 100px;
 	height: 100px;
 }
-.container{
+.container {
 	padding: 0 60px;
 }
-
+input[disabled] {
+	outline: 1px solid red;
+	&:hover {
+		cursor: not-allowed;
+	}
+}
 #dog_app {
 	.intro {
 		margin-bottom: 60px;
@@ -115,9 +123,8 @@ svg {
 	.dog_list_container {
 		.dog {
 			margin-bottom: 30px;
-			.breed_name{
-					text-transform: capitalize;
-
+			.breed_name {
+				text-transform: capitalize;
 			}
 			.dog_name {
 				padding: 0 60px;
@@ -139,7 +146,6 @@ svg {
 				padding: 15px 60px;
 				font-style: italic;
 				text-align: center;
-
 			}
 			.dog_images {
 				display: flex;
@@ -147,12 +153,6 @@ svg {
 				justify-content: center;
 				flex-wrap: wrap;
 				padding: 15px 60px;
-			}
-			input[disabled] {
-				outline: 1px solid red; // or whatever
-				&:hover {
-					cursor: not-allowed;
-				}
 			}
 		}
 	}

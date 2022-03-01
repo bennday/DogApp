@@ -46,7 +46,6 @@ export default {
 		height: 100%;
 		font-size: 150px;
 		line-height: 1;
-
 		padding: 0;
 		margin: 0;
 		color: #fff;
