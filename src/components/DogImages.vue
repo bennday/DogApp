@@ -1,5 +1,5 @@
 <template>
-	<div class="image_container" v-on:click="removeImage(url,breed)" v-bind:style="{ backgroundImage: 'url(' + url + ')' }"></div>
+	<div class="image_container" v-on:click="removeImage(url, breed)" v-bind:style="{ backgroundImage: 'url(' + url + ')' }"></div>
 </template>
 
 <script>
@@ -10,11 +10,11 @@ export default {
 		breed: String,
 	},
 	methods: {
-		removeImage: function (url,breed) {
+		removeImage: function (url, breed) {
 			const payload = {
 				url: url,
-				breed: breed
-			}
+				breed: breed,
+			};
 			this.$store.dispatch("removeSelectedImage", payload);
 		},
 	},
@@ -22,44 +22,42 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.image_container {
+	position: relative;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	margin: 5px;
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	overflow: hidden;
+	filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.5));
 
-	.image_container {
-		position: relative;
-		width: 180px;
-		height: 180px;
-		border-radius: 50%;
-		margin: 5px;
-		position: relative;
-		background-size: cover;
-		background-position: center center;
-		overflow: hidden;
-		border: 5px solid #fff;
-		&::after{
-				opacity: 0;
-				content: "X";
-				display: block;
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				width: 100%;
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-weight: bold;
-				font-size: 80px;
-				color: #fff;
-				background-color: rgba(#000,0.7);
-				transition: 0.3s;
-		}
-		&:hover{
-			cursor: pointer;
-			&::after{
-				opacity: 1;
+	&::after {
+		opacity: 0;
+		content: "x";
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		font-size: 150px;
+		line-height: 1;
 
-
-			}
+		padding: 0;
+		margin: 0;
+		color: #fff;
+		background-color: rgba(#000, 0.7);
+		transition: 0.3s;
+	}
+	&:hover {
+		cursor: pointer;
+		&::after {
+			opacity: 1;
 		}
 	}
-
+}
 </style>
